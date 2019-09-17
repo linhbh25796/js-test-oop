@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script src="bai2/Rat.js"></script>
+<script src="bai2/Cat.js"></script>
+<script>
+    let tom = new Cat("Tom", 30, 30);
+    let jerry = new Rat("Jerry", 50, 10);
+    jerry.say();
+    tom.say();
+    tom.chaseRat(jerry);
+    jerry.showStatus(jerry);
+    tom.eat();
+    jerry.showStatus(jerry);
+    console.log("Weight of cat after eat : "+tom.weight);
+
+</script>
+</body>
+</html>
