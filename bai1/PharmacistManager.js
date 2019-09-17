@@ -2,7 +2,7 @@ let listPharmacist = [];
 
 let PharmacistManager = function () {
     this.addPharmacist = function (id, name, age, address) {
-        let object = {};
+        let object = [];
         object['id'] = id;
         object['name'] = name;
         object['age'] = age;
@@ -10,16 +10,31 @@ let PharmacistManager = function () {
         listPharmacist.push(object);
     };
     this.displayPharmacist = function () {
-        for (let i = 0; i < listPharmacist.length; i++){
-            return console.log(listPharmacist[i]);
-        };
+        for(let i = 0; i < listPharmacist.length; i++){
+             console.log(listPharmacist[i]);
+    }
     };
 };
+
 let pharmacistManager = new PharmacistManager();
-pharmacistManager.addPharmacist(1,'Pharmacist 1', 20, 'City 1');
-pharmacistManager.addPharmacist(2,'Pharmacist 2', 21, 'City 2');
-pharmacistManager.addPharmacist(3,'Pharmacist 3', 22, 'City 3');
-pharmacistManager.addPharmacist(4,'Pharmacist 4', 23, 'City 4');
+let pharmacist = new Pharmacist(1, 'Pharmacist 1', 18, 'HaNoi');
+let pharmacist2 = new Pharmacist(2, 'Pharmacist 2', 19, 'Saigon');
+
+let id1 = pharmacist.getId();
+let name1 = pharmacist.getName();
+let age1 = pharmacist.getAge();
+let address1 = pharmacist.getAddress();
+
+
+let id2 = pharmacist2.getId();
+let name2 = pharmacist2.getName();
+let age2 = pharmacist2.getAge();
+let address2 = pharmacist2.getAddress();
+
+
+pharmacistManager.addPharmacist(id1, name1, age1, address1);
+pharmacistManager.addPharmacist(id2,name2, age2, address2);
+
 pharmacistManager.displayPharmacist();
 
 
